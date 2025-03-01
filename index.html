@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Comics - Series de CW</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function (event) {
+            const navLinks = document.getElementById('nav-links');
+            const menuButton = document.querySelector('.menuham');
+
+            if (!navLinks.contains(event.target) && !menuButton.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+        window.onload = function () {
+            alert("¡Bienvenido a la página de DC Comics - Series de CW!");
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="IMAGENES/logo.png" alt="Logo Dc comics." class="logo">
+        <nav class="navbar">
+            <h1 class="logo">DC CW Universe</h1>
+            <button class="menuham" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#series">Series Principales</a></li>
+                <li><a href="#events">Eventos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="series" class="series-section">
+            <h2>Series Principales</h2>
+            <div class="series-grid">
+                <div class="series-container">
+                    <img src="IMAGENES/flash.jpg" alt="Flash" class="series-image">
+                    <div class="series-info">
+                        <h3>Flash</h3>
+                        <p>Barry Allen, el hombre más rápido del mundo, protege Central City.</p>
+                    </div>
+                </div>
+                <div class="series-container">
+                    <img src="IMAGENES/arrow.jpg" alt="Arrow" class="series-image">
+                    <div class="series-info">
+                        <h3>Arrow</h3>
+                        <p>Oliver Queen lucha contra el crimen en Star City como Green Arrow.</p>
+                    </div>
+                </div>
+                <div class="series-container">
+                    <img src="IMAGENES/lot.jpg" alt="Legends of Tomorrow" class="series-image">
+                    <div class="series-info">
+                        <h3>Legends of Tomorrow</h3>
+                        <p>Un equipo de héroes y villanos protege la línea temporal.</p>
+                    </div>
+                </div>
+                <div class="series-container">
+                    <img src="IMAGENES/supergirl.jpeg" alt="Supergirl" class="series-image">
+                    <div class="series-info">
+                        <h3>Supergirl</h3>
+                        <p>Kara Zor-El protege National City como Supergirl.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="events" class="events-section">
+            <h2>Eventos Especiales</h2>
+            <div class="event">
+                <img src="IMAGENES/coie.avif" alt="Crisis en Tierras Infinitas">
+                <div class="event-info">
+                    <h3>Crisis en Tierras Infinitas</h3>
+                    <p>Aparece en: Flash (6x09), Arrow (8x08), Supergirl (5x09), Legends (5x01).</p>
+                    <p>Disponible en: Netflix</p>
+                </div>
+            </div>
+            <div class="event">
+                <img src="IMAGENES/elseworlds.jpg" alt="Elseworlds">
+                <div class="event-info">
+                    <h3>Elseworlds</h3>
+                    <p>Aparece en: Flash (5x09), Arrow (7x09), Supergirl (4x09).</p>
+                    <p>Disponible en: Netflix</p>
+                </div>
+            </div>
+            <div class="event">
+                <img src="IMAGENES/flasharrow.jpg" alt="Arrow vs Flash">
+                <div class="event-info">
+                    <h3>Arrow vs Flash</h3>
+                    <p>Aparece en: Flash (1x08) y Arrow (3x08).</p>
+                    <p>Disponible en: Netflix</p>
+                </div>
+            </div>
+            <div class="event">
+                <img src="IMAGENES/fsmusic.jpg" alt="Supergirl y Flash Musical">
+                <div class="event-info">
+                    <h3>Supergirl y Flash Musical</h3>
+                    <p>Aparece en: Supergirl (2x16) y Flash (3x17).</p>
+                    <p>Disponible en: Netflix</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contacto</h2>
+            <form class="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 DC Comics</p>
+    </footer>
+</body>
+
+</html>
